@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Link to Google Fonts -->
+    <style>
+      .container {
+        color:white;
+        background-color: #0D87DE;
+        text-align: left;
+        padding-top: 100px;
+        padding-left: 200px;
+        margin: 0 auto;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+      }
+      .gallery {
+    display: flex;
+    justify-content: center; /* Center the gallery horizontally */
+    max-width: 800px; /* Set the maximum width of the gallery */
+    margin: 0 auto; /* Center the gallery on the page */
+}
+
+.thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+    gap: 20px;
+  
+}
+.thumbnails img {
+    width: 45%;
+    object-fit: cover; /* Cover the thumbnail with the image, cropping as needed */
+    overflow: hidden; /* Hide any content that exceeds the specified dimensions */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle drop shadow effect */
+    transition: transform 0.3s; /* Add a transition for smooth animation */
+    border-radius: 10px;
+}
+
+.thumbnails img:hover {
+    transform: translateY(-5px); /* Apply a translateY transform on hover */
+    cursor:pointer
+}
+
+.thumbnails img.horizontal-image {
+  width: 100%;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 800px;
+}
+
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+    </style>
+    <script src="script.js"></script>
+
+</head>
+<body>
+  <div class="header">
+    <img src="logo.png" alt="Austin Chen Logo">
+    <nav>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resumé</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    </div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="portfolio.html">Portfolio</a> &gt; T-shirt Design
+  </div>
+    <h1 style="font-size: 40px"">T-shirt Design</h1>
+    <p>Product images that demonstrate features or interface of the app, pages and blog article pages</p>
+  </div>
+
+  <div class="gallery">
+    <div class="thumbnails">
+        <img src="tshirt.png" class="horizontal-image" alt="AI Powered Search" onclick="openModal('ai powered search.png')">
+        <img src="backimage2.png" alt="Back Image 1" onclick="openModal('backimage2.png')">
+        <img src="backimage1.png" alt="Back Image 2" onclick="openModal('backimage1.png')">
+
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="fullImg" class="modal-content">
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+</div>
+
+</body>
+</html>

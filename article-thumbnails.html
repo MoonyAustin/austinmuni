@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Link to Google Fonts -->
+    <style>
+      .container {
+        color:white;
+        background-color: #0D87DE;
+        text-align: left;
+        padding-top: 100px;
+        padding-left: 200px;
+        margin: 0 auto;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+      }
+      .gallery {
+    display: flex;
+    justify-content: center; /* Center the gallery horizontally */
+    max-width: 800px; /* Set the maximum width of the gallery */
+    margin: 0 auto; /* Center the gallery on the page */
+}
+
+.thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+    gap: 20px;
+  
+}
+.thumbnails img {
+    width: 45%;
+    object-fit: cover; /* Cover the thumbnail with the image, cropping as needed */
+    overflow: hidden; /* Hide any content that exceeds the specified dimensions */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle drop shadow effect */
+    transition: transform 0.3s; /* Add a transition for smooth animation */
+    border-radius: 10px;
+}
+
+.thumbnails img:hover {
+    transform: translateY(-5px); /* Apply a translateY transform on hover */
+    cursor:pointer
+}
+
+.thumbnails img.horizontal-image {
+  width: 100%;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 800px;
+}
+
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+    </style>
+    <script src="script.js"></script>
+
+</head>
+<body>
+  <div class="header">
+    <img src="logo.png" alt="Austin Chen Logo">
+    <nav>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resumé</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    </div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="portfolio.html">Portfolio</a> &gt; Article Thumbnails
+  </div>
+    <h1 style="font-size: 40px"">Article Thumbnails</h1>
+    <p>Product images that demonstrate features or interface of the app, pages and blog article pages</p>
+  </div>
+
+  <div class="gallery">
+    <div class="thumbnails">
+      <img src="articlethumbnail1.png" alt="Thumbnail 1" onclick="openModal('articlethumbnail1.png')">
+      <img src="articlethumbnail2.png" alt="Thumbnail 2" onclick="openModal('articlethumbnail2.png')">
+      <img src="articlethumbnail3.png" alt="Thumbnail 3" onclick="openModal('articlethumbnail3.png')">
+      <img src="articlethumbnail4.png" alt="Thumbnail 4" onclick="openModal('articlethumbnail4.png')">
+      <img src="articlethumbnail5.png" alt="Thumbnail 5" onclick="openModal('articlethumbnail5.png')">
+      <img src="articlethumbnail6.png" alt="Thumbnail 6" onclick="openModal('articlethumbnail6.png')">
+      <img src="articlethumbnail7.png" alt="Thumbnail 7" onclick="openModal('articlethumbnail7.png')">
+      <img src="articlethumbnail8.png" alt="Thumbnail 8" onclick="openModal('articlethumbnail8.png')">
+      <img src="articlethumbnail9.png" alt="Thumbnail 9" onclick="openModal('articlethumbnail9.png')">
+      <img src="articlethumbnail10.png" alt="Thumbnail 10" onclick="openModal('articlethumbnail10.png')">
+      <img src="articlethumbnail11.png" alt="Thumbnail 11" onclick="openModal('articlethumbnail11.png')">
+      <img src="articlethumbnail12.png" alt="Thumbnail 12" onclick="openModal('articlethumbnail12.png')">
+      <img src="articlethumbnail13.png" alt="Thumbnail 13" onclick="openModal('articlethumbnail13.png')">
+      <img src="articlethumbnail14.png" alt="Thumbnail 14" onclick="openModal('articlethumbnail14.png')">
+      <img src="articlethumbnail15.png" alt="Thumbnail 15" onclick="openModal('articlethumbnail15.png')">
+      <img src="articlethumbnail16.png" alt="Thumbnail 16" onclick="openModal('articlethumbnail16.png')">
+      <img src="articlethumbnail17.png" alt="Thumbnail 17" onclick="openModal('articlethumbnail17.png')">
+      <img src="articlethumbnail18.png" alt="Thumbnail 18" onclick="openModal('articlethumbnail18.png')">
+      <img src="articlethumbnail19.png" alt="Thumbnail 19" onclick="openModal('articlethumbnail19.png')">
+      
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="fullImg" class="modal-content">
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+</div>
+
+</body>
+</html>

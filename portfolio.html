@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Link to Google Fonts -->
+ <style>
+.tablink {
+    /* Add any additional styling for your buttons here */
+    font-family: poppins;
+    font-size: 20px; 
+    padding: 10px 20px; 
+    border-radius: 10px; 
+    border: none; 
+    color: white;
+    background-color: #5A6071;
+    margin: 0 10px; /* Add margin to space out the buttons */
+    transition: all 0.3s ease;
+}
+
+.tablink:hover {
+  cursor: pointer;
+  background-color: #EEBC47;
+  color: white;
+}
+
+.tablink.active {
+background-color: #EEBC47;
+color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  height:550px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  border-radius: 10px;
+  width: 60%;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 775px;
+  padding: 30px;
+}
+
+/* Product Images */
+.container1{background-color: #6808EE;}
+/* Banners & Posters */
+.container2{background-color: #41B2A0;} 
+/* Article Thumbnails */
+.container3{background-color: #2C2456;}
+/* T shirt design */
+.container4{background-color: #7F02FF;}
+/* bilibili channel */
+.container5{background-color: #F76596;}
+/* Product Demo */
+.container6{background-color: #6752FB;}
+/* Keynote Presentation */
+.container7{background-color: #34B41C;}
+/* Copywriting */
+.container8{background-color: #F76596;}
+/* Blog Articles */
+.container9{background-color: #9DE8C9;}
+
+.container img {
+  width:100%;
+  height: auto;
+  margin-bottom: 20px; /* Add space between the images */
+  transition: transform 0.5s;
+  padding: 20px;
+}
+
+.container:hover img{
+  transform: translateY(-10px); /* Adjust the value as needed for the desired float effect */
+}
+
+.container:hover .overlay{
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent black overlay on hover */
+}
+
+.overlay{
+  position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0); /* Transparent overlay */
+            transition: 0.5s;
+}
+    </style>
+</head>
+
+<body>
+  <div class="header">
+    <img src="logo.png" alt="Austin Chen Logo">
+    <nav>
+        <a href="index.html">About</a>
+        <a href="resume.html">Resumé</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    </div>
+<!-- Top Banner -->
+<div class="topbanner">
+  <h1>Portfolio</h1>
+</div>
+<!-- Tabs -->
+    <div class="tab-container" style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 20px;">
+      <button class="tablink" onclick="openSection('graphics')">Graphics</button>
+      <button class="tablink" onclick="openSection('videos')">Videos</button>
+      <button class="tablink" onclick="openSection('translation-writing')">Translation & Writing</button>
+  </div>
+  
+<!-- Graphics Section -->
+    <div id="graphics" class="tabcontent">
+<!-- Container 1 -->
+    <a href="product-images.html" class="container container1">
+      <div class="overlay"></div>      
+      <h1>Product Images</h1>
+            <img src="ai note taker large.png" alt="Product Images">
+    </a>
+<!-- Container 2 -->
+<a href="article-thumbnails.html" class="container container2">
+  <div class="overlay"></div>      
+  <h1>Article Thumbnails </h1>
+        <img src="thumbnails.png" alt="Article Thumbnails">
+</a>    
+<!-- Container 3 -->
+    <a href="banners-and-posters.html" class="container container3">
+      <div class="overlay"></div>      
+      <h1>Banners & Posters</h1>
+<img src="poster thumbnail.png" alt="Banners & Posters">
+    </a>
+<!-- Container 4 -->
+<a href="tshirt-design.html" class="container container4">
+  <div class="overlay"></div>      
+  <h1>T-shirt Design </h1>
+        <img src="tshirt.png" alt="T-shirt Design">
+</a>  
+    </div>
+
+    <div id="videos" class="tabcontent">
+        <!-- Videos Section -->
+<!-- Container 5 -->
+<a href="bilibili.html" class="container container5">
+ <div class="overlay"></div>      
+ <h1>My bilibili Channel</h1>
+       <img src="bilibili.png" alt="My bilibili Channel">
+</a>
+<!-- Container 6 -->
+<a href="product-demo.html" class="container container6">
+ <div class="overlay"></div>      
+ <h1>Product Demo</h1>
+       <img src="productdemo.png" alt="Product Demo">
+</a>
+<!-- Container 7 -->
+<a href="keynote-presentation.html" class="container container7">
+ <div class="overlay"></div>      
+ <h1>Keynote Presentation</h1>
+       <img src="elfdemo.png" alt="Keynote Presentation">
+</a>
+    </div>
+
+    <div id="translation-writing" class="tabcontent">
+
+<!-- Blog Articles -->
+ <!-- Container 8 -->
+ <a href="copywriting.html" class="container container8">
+  <div class="overlay"></div>      
+  <h1>Copywriting</h1>
+        <img src="ai note taker large.png" alt="Copywriting">
+</a>
+<!-- Container 9 -->
+<a href="blog-articles.html" class="container container9">
+  <div class="overlay"></div>      
+  <h1>Blog Articles</h1>
+        <img src="ai note taker large.png" alt="Blog Articles">
+</a>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

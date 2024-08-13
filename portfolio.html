@@ -34,16 +34,14 @@ color: white;
 .container {
   display: flex;
   flex-direction: column; /* Stack elements vertically */
-  height:550px;
+  height:50%;
   cursor: pointer;
   position: relative;
   overflow: hidden;
   text-align: left;
   border-radius: 10px;
-  width: 60%;
+  width: 40%;
   justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
   max-width: 775px;
   padding: 30px;
 }
@@ -97,14 +95,17 @@ color: white;
 
 <body>
   <div class="header">
-    <img src="logo.png" alt="Austin Chen Logo">
+    <a href="index.html" class="logo-link">
+        <img src="mj-avatar.JPG" style="border-radius: 50%" alt="Austin Chen Logo">
+        <span>AUSTIN CHEN</span>
+    </a>
     <nav>
         <a href="index.html">About</a>
         <a href="resume.html">Resumé</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="contact.html">Contact</a>
     </nav>
-    </div>
+</div>
 <!-- Top Banner -->
 <div class="topbanner">
   <h1>Portfolio</h1>
@@ -117,8 +118,10 @@ color: white;
   </div>
   
 <!-- Graphics Section -->
-    <div id="graphics" class="tabcontent">
+
+<div id="graphics" class="tabcontent">
 <!-- Container 1 -->
+<div class="card-container">
     <a href="product-images.html" class="container container1">
       <div class="overlay"></div>      
       <h1>Product Images</h1>
@@ -143,10 +146,12 @@ color: white;
         <img src="tshirt.png" alt="T-shirt Design">
 </a>  
     </div>
+    </div>    
 
     <div id="videos" class="tabcontent">
         <!-- Videos Section -->
-<!-- Container 5 -->
+<div class="card-container">
+        <!-- Container 5 -->
 <a href="bilibili.html" class="container container5">
  <div class="overlay"></div>      
  <h1>My bilibili Channel</h1>
@@ -165,10 +170,12 @@ color: white;
        <img src="elfdemo.png" alt="Keynote Presentation">
 </a>
     </div>
+  </div>
 
     <div id="translation-writing" class="tabcontent">
 
 <!-- Blog Articles -->
+ <div class="card-container">
  <!-- Container 8 -->
  <a href="copywriting.html" class="container container8">
   <div class="overlay"></div>      
@@ -182,6 +189,7 @@ color: white;
         <img src="ai note taker large.png" alt="Blog Articles">
 </a>
     </div>
+  </div>
 </div>
 <script src="script.js"></script>
 </body>

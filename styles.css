@@ -67,7 +67,7 @@ body {
   flex-direction: column;
   max-width: 1080px;
   border-radius: 10px;
-  font-size: 25px;
+  font-size: 23px;
   align-items: center;
   justify-content: center;
   margin-bottom:30px;
@@ -299,19 +299,106 @@ width: 100%;
       margin-left: auto;
   }
 
+  .summary-and-location {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   .summary{
+    font-weight: normal;
+    font-style: italic;
+    font-size: 14px;
+    text-align: left;
 
+  }
+
+  .location{
+    font-weight: normal;
+    font-style: italic;
+    font-size: 14px;
+    text-align: right;
+    margin-left: auto;
   }
   
   .description {
       margin-left: 20px;
-      font-size: 14px;
+      font-size: 15px;
+      margin-bottom:20px;
   }
   ul {
       list-style-type: disc;
       margin: 10px 0;
-      padding-left: 40px;
+      padding-left: 10px;
   }
   ul li {
       margin-bottom: 5px;
   }
+
+  .main-list > li > ul.sub-list {
+    list-style-type: circle; /* This makes sub-list bullets hollow (or no-fill) */
+}
+
+  /* Card */
+  .card-container {
+    display: flex;
+    justify-content: center; /* Center children horizontally */
+    flex-wrap: wrap; /* Allows cards to wrap onto the next line if the container is too narrow */
+    max-width: 1080px; /* Maximum width of the container */
+    margin: 0 auto; /* Center the container itself horizontally */
+    margin-top: 10px;
+    margin-bottom:50px;
+    gap: 10px; /* Optional: adds space between cards */
+  }
+  
+  .card {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Stack children vertically */
+    background-color: white;
+    border-radius: 10px;
+    width:25%;
+  }
+
+  .link-cards {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    width:25%;;
+  }
+
+  .link-card {
+    display: flex;
+    justify-content: center; /* Center the card content */
+    background-color: white;
+    border-radius: 10px;
+    width: 25%;
+    overflow: hidden; /* Ensures the border-radius applies to child elements */
+    margin: 10px; /* Add some space around cards */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.card-link {
+    text-decoration: none; /* Removes underline from links */
+    color: inherit; /* Inherits text color from parent */
+    display: block; /* Makes the link fill the entire card container */
+    width: 100%;
+}
+
+.card-content {
+    padding: 20px; /* Adds some padding inside the card */
+}
+
+.card-title {
+    color: #3E4355; /* Original title color */
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+/* Hover Effects */
+.link-card:hover {
+    transform: scale(1.05); /* Makes the card grow */
+}
+
+.link-card:hover .card-title {
+    color: #676c78; /* Lighter title color on hover */
+}

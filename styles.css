@@ -85,7 +85,7 @@ body {
   height: 300px;
   display: flex;
   flex-direction: column;
-  max-width: 1080px;
+  max-width: 880px;
   border-radius: 10px;
   font-size: 18px;
   align-items: left;
@@ -266,6 +266,8 @@ width: 100%;
 
 /* Resume */
 .resumecontainer {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color:#3E4355;
   width: 100%;
       max-width: 800px;
       margin: 0 auto;
@@ -292,8 +294,10 @@ width: 100%;
       margin-bottom: 20px;
   }
   .section-title {
-      font-size: 18px;
-      border-bottom: 1px solid #ccc;
+    color:#3E4355;
+    font-weight: 600;  
+    font-size: 18px;
+      border-bottom: 1px solid #3E4355;
       padding-bottom: 5px;
       margin-bottom: 10px;
   }
@@ -304,7 +308,8 @@ width: 100%;
   }
 
   .title {
-      font-weight: bold;
+    color:#3E4355;  
+    font-weight: bold;
       font-size: 16px;
       text-align: left;
   }

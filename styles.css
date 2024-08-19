@@ -77,8 +77,25 @@ body {
   font-size:40px;
 }
 
-.portfoliobanner {
+.portfolio-banner {
+  color:white;
+  background-color: #3E4355;
+  text-align: left;
+  margin: 0 auto;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  max-width: 1080px;
+  border-radius: 10px;
+  font-size: 18px;
+  align-items: left;
+  justify-content: center;
+  margin-bottom:30px;
+  padding: 80px;
+}
 
+.portfolio-banner a {
+  color:white;
 }
 
 .container {

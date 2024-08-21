@@ -48,18 +48,18 @@ body {
 }
 
 .header nav a:hover {
-  background-color: #5A6071;
+  background-color: #41A58D;
   color: white;
 }
 
 .header nav a:active {
-  background-color: #5A6071;
+  background-color: #41A58D;
   color: white;
 }
 
 .topbanner {
   color:white;
-  background-color: #3E4355;
+  background-color: #464A6A;
   text-align: center;
   margin: 0 auto;
   height: 200px;
